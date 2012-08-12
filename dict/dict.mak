@@ -20,9 +20,9 @@ $(DICT_BASE): $(SKKDIC_FILE) ../tools/skk2migemo.pl ../tools/optimize-dict.pl
 	$(PERL) ../tools/skk2migemo.pl < $(SKKDIC_FILE) > dict.tmp
 	$(PERL) ../tools/optimize-dict.pl < dict.tmp > $@
 	-$(RM) dict.tmp
-$(SKKDIC_FILE):
-	$(HTTP) $(SKKDIC_BASEURL)/$@.gz
-	$(GUNZIP) $@.gz
+# $(SKKDIC_FILE):
+# 	$(HTTP) $(SKKDIC_BASEURL)/$@.gz
+# 	$(GUNZIP) $@.gz
 
 ##############################################################################
 # Dictionary in cp932
